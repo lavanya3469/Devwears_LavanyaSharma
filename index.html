@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevWears - Premium Fashion & Clothing</title>
+    <meta name="description" content="Discover the latest trends in premium fashion with DevWears. High-quality clothing that combines style, comfort, and affordability. Shop our collection today!" />
+    <meta name="author" content="DevWears" />
+    <meta name="keywords" content="fashion, clothing, apparel, style, premium, trendy, affordable, DevWears" />
+
+    <meta property="og:title" content="DevWears - Premium Fashion & Clothing" />
+    <meta property="og:description" content="Discover the latest trends in premium fashion with DevWears. High-quality clothing that combines style, comfort, and affordability." />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@devwears" />
+    <meta name="twitter:title" content="DevWears - Premium Fashion & Clothing" />
+    <meta name="twitter:description" content="Discover the latest trends in premium fashion with DevWears. High-quality clothing that combines style, comfort, and affordability." />
+    
+    <!-- Prevent favicon requests -->
+    <link rel="icon" href="data:,">
+    
+    <!-- For SPA routing -->
+    <base href="/">
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Handle 404 redirects for SPA -->
+    <script>
+      // Check if this might be a route path and redirect to root
+      (function() {
+        if (window.location.pathname !== '/' && !window.location.pathname.includes('.')) {
+          // Store the original path to be handled by React Router
+          sessionStorage.setItem('redirectPath', window.location.pathname);
+        }
+      })();
+    </script>
+  </body>
+</html>
